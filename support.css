@@ -1,0 +1,349 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: 'Arial', sans-serif;
+
+    background-color: #f4f4f4;
+
+    color: #333;
+
+}
+
+header {
+
+    background-color: #009688;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 20px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+.logo {
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+    animation: logo-slide 1s ease-in-out;
+
+}
+
+.menu-toggle {
+
+    display: none;
+
+    flex-direction: column;
+
+    cursor: pointer;
+
+}
+
+.menu-toggle .bar {
+
+    height: 3px;
+
+    width: 25px;
+
+    background-color: white;
+
+    margin: 3px 0;
+
+    transition: all 0.3s ease;
+
+}
+
+.navbar ul {
+
+    list-style: none;
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+.navbar ul li a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 8px 15px;
+
+    transition: background-color 0.3s, transform 0.2s;
+
+}
+
+.navbar ul li a:hover {
+
+    background-color: #00796b;
+
+    border-radius: 5px;
+
+    transform: scale(1.05);
+
+}
+
+.toggle-button {
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    display: none;
+
+    cursor: pointer;
+
+}
+.support-section {
+
+    background-color: #fff;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    animation: fadeIn 0.8s ease-in;
+
+}
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+input, textarea, button {
+
+    margin-bottom: 15px;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+}
+
+button {
+
+    background-color: #1a73e8;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+
+}
+
+button:hover {
+
+    background-color: #0b58b8;
+
+}
+
+.accordion-button {
+
+    background-color: #1a73e8;
+
+    color: white;
+
+    padding: 15px;
+
+    width: 100%;
+
+    border: none;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+
+}
+
+.accordion-content {
+
+    background-color: #f1f1f1;
+
+    padding: 0 15px;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.2s ease-out;
+
+}
+
+/* Live Chat */
+/* Basic Styles */
+
+
+.support-section {
+
+    padding: 20px;
+
+}
+
+.chatbox {
+
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: white;
+
+    border: 1px solid #ccc;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+}
+
+.chatbox-messages {
+
+    height: 200px;
+
+    overflow-y: scroll;
+
+    border: 1px solid #ddd;
+
+    padding: 10px;
+
+    margin-bottom: 15px;
+
+    background-color: #f9f9f9;
+
+}
+
+input {
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    border-radius: 4px;
+
+    border: 1px solid #ccc;
+
+}
+
+button {
+
+    padding: 10px;
+
+    background-color: #1a73e8;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+
+}
+
+button:hover {
+
+    background-color: #155aa8;
+
+}
+
+.hidden {
+
+    display: none;
+
+}
+@media (max-width: 768px) {
+
+    .navbar ul {
+
+        flex-direction: column;
+
+        position: absolute;
+
+        top: 60px;
+
+        left: 0;
+
+        background-color: #009688;
+
+        width: 100%;
+
+        display: none;
+
+        padding: 10px 0;
+
+    }
+
+    .navbar ul.active {
+
+        display: flex;
+
+    }
+
+    .menu-toggle {
+
+        display: flex;
+
+    }
+
+    .dashboard-overview {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .quick-links {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .animated-button {
+
+        width: 100%;
+
+        margin: 10px 0;
+
+    }
+
+}
